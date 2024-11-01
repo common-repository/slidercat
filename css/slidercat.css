@@ -1,0 +1,152 @@
+/*
+ * Modified jQuery FlexSlider v2.2.0 CSS
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.slidercat a:active,
+.flex-container a:focus,
+.slidercat a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.slidercat {
+	margin: 0; padding: 0; background-color:#000;
+} 
+.slidercat .slides > div {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.slidercat .slides img {width: 100%; display: block; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none;}
+
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load in case of fade event */
+.no-js .slides > div:first-child {display: block;}
+
+/* FlexSlider Default Theme
+*********************************/
+.slidercat { margin: 0 0 0px; position: relative; overflow:hidden; }
+.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+.loading .flex-viewport { max-height: 600px; min-height: 300px; background: url('../images/loader.gif') no-repeat center center !important; }
+/*.loading {min-height: 300px; background: url('../images/loader.gif') no-repeat center center !important;}*/
+.slidercat .slides { zoom: 1; }
+.carousel li { margin-right: 5px; }
+
+.slidercatitem { position:relative; margin:0 auto; }
+.slidercatcontent { position:absolute; width:100%; z-index:29; opacity:0; display:none; -webkit-backface-visibility: hidden;}	
+.slidercatcontent h1, .slidercatcontent h2 {margin:0 auto;}
+
+.top-left {top:5%;}
+.top-left p {float:left;}
+.center-left {top:40%;}
+.center-left p {top:40%;float:left;}
+.bottom-left p {float:left;margin-top:-10%;}
+.center-top {top:5%;}
+.center-top p {margin:0 auto; text-align:center;}
+.center-center { top:40%; }
+.center-center p {margin:0 auto; text-align:center;}
+.center-bottom p {margin:0 auto; margin-top:-10%;text-align:center;}
+.top-right {top:5%;}
+.top-right p {float:right;text-align:right;}
+.center-right {top:40%;text-align:right;}
+.center-right p {float:right;}
+.bottom-right p {float:right;margin-top:-10%; text-align:right;}
+
+.white p {color:#FFF; background-image: url(../images/bg_cont_black.png)}
+.white a {color:#FFF!important;}
+.slidercat .white img { background-image:none;}
+.grey p {color: #CCC;background-image: url(../images/bg_cont_white.png)}
+.grey a {color:#333!important;}
+.red p {color:#D90000;background-image: url(../images/bg_cont_black.png)}
+.red a {color:#D90000!important;}
+.yellow p {color:#FEFC30;background-image: url(../images/bg_cont_black.png)}
+.yellow a {color: #FEFC30!important;}
+.blue p {color: #3389F4;background-image: url(../images/bg_cont_black.png)}
+.blue a {color: #3389F4!important;}
+.violet p {color: #7F00FF;background-image: url(../images/bg_cont_white.png)}
+.violet a {color: #7F00FF!important;}
+.black p {color:#000;background-image: url(../images/bg_cont_white.png)}
+.black a {color: #000!important;}
+
+.small p { font-size:22px;font-weight:normal; padding:6px;}
+.medium p { font-size:35px;font-weight:normal; padding:8px;}
+.big p { font-size:45px;font-weight:normal; padding:10px;}
+.xxl p { font-size:60px;font-weight:bold; padding:12px;}
+
+.full-width h1 { max-width:100%;width:100%;}
+.full-width h2 { max-width:100%;width:100%;/}
+.full-width p { width:100%; max-width:100%;}
+.wraped-width-1600 h1, .wraped-width-1600 h2  { max-width:1600px;width:100%;}
+.wraped-width-1300 h1, .wraped-width-1300 h2{ max-width:1300px;width:100%;}
+.wraped-width-1180 h1, .wraped-width-1180 h2 { max-width:1180px;width:100%;}
+.wraped-width-1040 h1, .wraped-width-1040 h2 { max-width:1040px;width:100%;}
+.wraped-width-760 h1, .wraped-width-760 h2{ max-width:760px;width:100%;}
+.wraped-width-520 h1, .wraped-width-520 h2{ max-width:520px;width:100%;}
+
+.max-width-160 p {max-width:160px;}
+.max-width-240 p {max-width:240px;}
+.max-width-320 p {max-width:320px;}
+.max-width-480 p {max-width:480px;}
+.max-width-640 p {max-width:640px;}
+.max-width-800 p {max-width:800px;}
+.max-width-1024 p {max-width:1024px;}
+
+.flex-active-slide .slidercattitle { opacity:1; display: inline; }
+.flex-active-slide .slidercatcontent { opacity:1; display: inline; }
+.flex-active-slide .slidercatexcerpt { opacity:1; display: inline; }
+
+/*Responsive video*/
+.sc_yv { position: relative; padding-bottom: 56.25%; padding-top: 25px; height: 0; }
+.sc_yv iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Direction Nav */
+.flex-direction-nav {height: 0;}
+
+.flex-direction-nav a  {  display: block;background: url('../images/bg_direction_nav.png') no-repeat scroll 0px 0px transparent; width: 30px; height: 30px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; opacity: 0; cursor: pointer; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease;  }
+
+.flex-direction-nav .flex-prev { left: 0px; }
+.flex-direction-nav .flex-next { right: 0px; }
+
+.slidercat:hover .flex-prev { opacity: 0.5; left: 5px; }
+.slidercat:hover .flex-next { opacity: 0.5; right: 5px; }
+
+.slidercat:hover .flex-next:hover, .slidercat:hover .flex-prev:hover { opacity: 1; }
+.flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
+
+/*.flex-direction-nav a:before  { font-family: "slidercat-icon"; font-size: 40px; line-height:1; display: inline-block; content: '\f001';  }
+.flex-direction-nav a.flex-next:before  { content: '\f002'; }*/
+.flex-direction-nav a { margin: 0px 0px 0px; text-indent: -9999px; z-index:10000001; }
+.flex-direction-nav .flex-next { background-position: 100% 0px; right: 0px; }
+
+/* Pause/Play */
+.flex-pauseplay  { height: 0;  }
+.flex-pauseplay a {  display: block; background: url('../images/bg_play_pause.png') no-repeat scroll 0px 0px transparent; background-position: 100% 0px; width: 30px; height: 30px; position: absolute; bottom:5px; right: 0px; opacity: 0;  z-index: 5000000; overflow: hidden;  cursor: pointer; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; }
+.slidercat:hover .flex-pause { opacity: 0.7; right: 5px; }
+.slidercat:hover .flex-pause:hover { opacity: 1; }
+.flex-pauseplay .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; } /*-popravit-*/
+
+/*.flex-pauseplay a:before  { font-family: "slidercat-icon"; font-size: 20px; display: inline-block; content: '\f004'; }*/
+/*.flex-pauseplay a.flex-play:before { content: ''; }*/
+
+/* Control Nav */
+.flex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}
+.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.5); cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); box-shadow: inset 0 0 3px rgba(0,0,0,0.3); }
+.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
+.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+
+@media screen and (max-width:960px) { .small p { font-size:18px;} .medium p { font-size:25px;} .big p { font-size:32px;} .xxl p { font-size:40px;} }
+@media screen and (max-width: 760px) { .small p { font-size:16px;} .medium p { font-size:22px;} .big p { font-size:28px;} .xxl p { font-size:32px;} }
+@media screen and (max-width: 560px) { .small p { font-size:12px;} .medium p { font-size:14px;} .big p { font-size:18px;} .xxl p { font-size:22px;} }
